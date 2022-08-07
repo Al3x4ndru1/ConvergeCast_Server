@@ -1,26 +1,6 @@
-// function myFunction(){
-// document.addEventListener('DOMContentLoaded', function() {
-//     var button = document.createElement('button');
-//     button.type = 'button';
-//     button.innerHTML = 'Press me';
-//     button.className = 'btn-styled';
- 
-//     button.onclick = function() {
-//         // …
-//     };
- 
-//     var container = document.getElementById('container');
-//     container.appendChild(button);
-// }, false);
-// }
-
-
-
 // TODO: Sa fac sa fie pe coloane si pe linii
 
 number_of_cameras= 0;
-
-
 
 function myFunction() {
   if(number_of_cameras%2!==0){
@@ -42,9 +22,14 @@ function myFunction() {
 
       div.appendChild(div_title); //  Append the div_title to the main div("CameraArticle")
 
+      number_of_cameras++; // Increment number_of_cameras variable
       document.body.appendChild(div); // Append the main div into the HTML document
     }
     else{
 
+
+
+      number_of_cameras++; // Increment number_of_cameras variable
+      document.body.appendChild(div); // Append the main div into the HTML document
     }
   }

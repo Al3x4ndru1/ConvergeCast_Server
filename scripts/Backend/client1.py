@@ -1,5 +1,4 @@
 #import the dependencies
-from ipaddress import ip_address
 import cv2 as cv
 import bson
 import requests
@@ -11,6 +10,7 @@ app = Flask(__name__)
 
 capture= cv.VideoCapture(0) # Set the opencv to get input from the camera
 
+#The Client Flask method that return the frame
 @app.route('/video/', methods=['GET'])
 def video():
     
