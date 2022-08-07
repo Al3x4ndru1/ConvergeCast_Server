@@ -1,3 +1,5 @@
+#!/bin/bash
+
 $msg
 git add .
 git status
