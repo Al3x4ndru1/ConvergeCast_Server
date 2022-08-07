@@ -1,3 +1,4 @@
+#!/bin/bash
 echo 'Initializing...'
 sudo apt -y install python3 python3.10-venv figlet > /dev/null 2>&1
 
