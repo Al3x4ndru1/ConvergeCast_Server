@@ -20,6 +20,9 @@ import cupy as cp
 
 threads = []
 
+
+# TODO: Implement Nvidia and to implemet the GUI
+
 #from flask_bson import accept_bson, bsonify
 
 server = Blueprint('index',__name__)
