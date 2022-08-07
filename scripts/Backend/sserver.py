@@ -1,18 +1,17 @@
-#https://github.com/jar-o/flask-bson/pull/1/files
 #import the dependencies
 from flask import request, render_template, Blueprint, session, app
 import numpy as np
-from datetime import timedelta
+
 import time 
 from cv2 import cuda
-#import grequests
+
 import cv2 as cv
 import bson
 import pickle
 import gc
 import os
 import zlib
-import torch
+#import torch
 from os import environ
 import threading
 from threading import active_count
@@ -52,8 +51,6 @@ class TheClass:
 #@server.route(f'/get_video/{}')
 
 
-
-
 #Create connection with the client
 @server.route('/server/',methods=['POST'])
 def connect():
@@ -65,8 +62,7 @@ def connect():
             b=a['ipaddress'] #Get the Ipaddress of the client
             t= TheClass() #Create class of the TheClass
             thredd=threading.Thread(target=t.hello_world,args=(s,b))
-            threads.append(thredd)
-            nr_of_threads=active_count()-1
+            threads.append(thredd) # Put the thread at the end of the array
             thredd.start() #Start a Thread for each client
             return("OK") #Return Ok (<Response 200>)
         except:
