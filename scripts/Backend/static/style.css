@@ -1,0 +1,81 @@
+body{
+    background-color:black;
+    color:white;
+}
+
+.alertNoCameras{
+    background-color:black;
+    color:coral;
+    border: solid 2px;
+    border-radius: 12px;
+    border-width: fit;
+    border-color:coral;
+}
+
+aside {
+    width: 30%;
+    margin-top:80px;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+    position: fixed;
+    font-style: italic;
+    background-color: lightgray;
+    
+  }
+
+.btn-styled {
+    font-size: 14px;
+    margin: 8px;
+    padding: 0 10px;
+    line-height: 2;
+}
+
+header {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+.sidenav {
+  height: 90%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 17%;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.mainSection {
+  height:79%;
+  width: 84%;
+  z-index: 1;
+  top: 18%;
+  position: absolute;
+  left: 1;
+  background-color: #111;
+  border-color: aqua;
+  border-width: fit;
+  overflow-x: hidden;
+  border-style: solid;
+  padding-top: 20px;
+}
+
+.CameraArticle{
+  height: 20%;
+  width: 20%;
+  position: auto;
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
+  border:fit;
+}
+
+.CameraTitle{
+  text-align: center
+}
