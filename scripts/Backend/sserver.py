@@ -5,6 +5,7 @@ import numpy as np
 import time 
 from cv2 import cuda
 
+from numba import jit, cuda
 import cv2 as cv
 import bson
 import pickle
@@ -18,8 +19,9 @@ from threading import active_count
 import requests
 import cupy as cp
 
-threads = []
+from .get_video import show
 
+threads = []
 
 # TODO: Implement Nvidia and to implemet the GUI
 
@@ -29,12 +31,10 @@ server = Blueprint('index',__name__)
 
 #TheClass that handles the 
 class TheClass:
-
+   
+    #@cuda.autojit
     def hello_world(self,s,ipaddress):
-        environ["QT_DEVICE_PIXEL_RATIO"] = "0"
-        environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
-        environ["QT_SCREEN_SCALE_FACTORS"] = "1"
-        environ["QT_SCALE_FACTOR"] = "1"
+        #T_threads = [2]
         while True:
             try:
                 data= s.get(f'http://{ipaddress}:5000/video')
@@ -44,7 +44,10 @@ class TheClass:
                 # tensor_a= torch.from_numpy_array(frame)
                 # y= torch.tensor()
                 # cv.gpu.GpuMat()
-                cv.imshow('test', frame) # show images frame by frame 
+                #return frame
+                thread = threading.Thread(target=show, args=(frame,))
+                #T_threads.append(thread)
+                #cv.imshow('test', frame) # show images frame by frame 
             except:
                 continue # sometimes the line 41 will return a error about the headers so the code will not print that frame, will skip to be able to have more fps
             if cv.waitKey(20) & 0xFF == ord('d'):   # stop the video is the key 'd' is pressed (you can change as per your choice)
