@@ -7,13 +7,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script type="text/javascript" src="/eel.js"></script>
 <script
 type="text/javascript"
 src="{{ url_for('static', filename='/javascript/aside/activate_Buttons.js')}}"
  ></script>
 
-<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
+<!-- <script defer src="https://pyscript.net/alpha/pyscript.js"></script> -->
 
 
 <!-- <script
@@ -50,12 +51,8 @@ src="{{ url_for('static', filename='')}}" -->
     <div id="container"></div>
   </div>
   
-<div class="container">
-    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
-    
-</div>"
 
-
+<!--TODO: add javascript to allow this part or not-->
 
 <div class="mainSection">
     <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
@@ -64,13 +61,19 @@ src="{{ url_for('static', filename='')}}" -->
             <div class="CameraTitle">Camera 1
 
                 <input type="checkbox" id="checkbox" onclick="selectCameras(this.id)">
-                <div id="plot"></div>
+                {% if filename %}
+                    <div>
+                        <img src="data:image/jpeg;{{ filename }}"></img>
+                    </div>
+                {% endif %}
+                <!-- <img src="data:image/jpeg;base64, {{img}}"></img>
+
                 <py-script
-                output="plot"
-                src="./Backend/get_video.py">
-                </py-script>
-                <!-- <div container class="Camera"><py-script
-                    src="./Backend/get_video.py"></py-script></div> -->
+                    output="plot"
+                    src="./Backend/get_video.py">
+                </py-script> -->
+
+                <!-- <div container class="Camera"><py-script src="./Backend/get_video.py"></py-script></div> -->
                 
                 <!-- <video id="videoplayer" autoplay="true" src= ""
 
