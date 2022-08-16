@@ -2,7 +2,6 @@ anyio==3.6.1
 blinker==1.5
 bottle==0.12.23
 bottle-websocket==0.2.9
-bson==0.5.10
 certifi==2022.6.15
 charset-normalizer==2.1.0
 click==8.1.3

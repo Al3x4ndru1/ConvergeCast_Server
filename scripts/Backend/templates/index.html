@@ -2,16 +2,42 @@
 <html>
 <head>
 <title>Convrge Cast</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
-<link rel="stylesheet" href="{{ url_for('static', filename='javascript/main.js') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='Css/style.css') }}"/>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<script type="text/javascript" src="/eel.js"></script>
+<link async rel="stylesheet" href="{{ url_for('static', filename='javascript/js/opencv.js')}}">
+<link rel="stylesheet" href="javascript/js/utils.js">
+
+
+
+<link rel="stylesheet" 
+href="{{ url_for('static', 
+filename='javascript/video/Checks/check_first_checkbox.js')}}"/> <!--Inport javascript that will check if 
+                                                                the ckeckbox for that ip is selected-->
+
+
+<link rel="stylesheet"
+href="{{ url_for('static', 
+filename='javascript/video/video.js')}}"/> <!--Inport javascript that will upload the video stream to the HTML-->
+
+
+<link rel="stylesheet" 
+href="{{ url_for('static',
+filename = 'javascript/main/create_video.js')}}"/> <!--Inport javascript that will automatically create 
+                                                    a new HTML element that will show the video stream-->
+
+
+
+
 <script
 type="text/javascript"
-src="{{ url_for('static', filename='/javascript/aside/activate_Buttons.js')}}"
- ></script>
+src="{{ url_for('static', filename='/javascript/aside/activate_Buttons.js')}}" 
+ ></script> <!--Inport javascript that will check the if the ckeckboxs are selected to tell the user to don't activate
+                any computervision features without selecting a camera-->
+
+
 
 <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
 <!-- <script defer src="https://pyscript.net/alpha/pyscript.js"></script> -->
@@ -29,10 +55,6 @@ src="{{ url_for('static', filename='/javascript/aside/aside.js')}}"
     - matplotlib
      - ./get_video.py
  </py-env>
-
-<!-- <script
-type="text/javascript"
-src="{{ url_for('static', filename='')}}" -->
 
 </head>
 <body>
@@ -55,17 +77,14 @@ src="{{ url_for('static', filename='')}}" -->
 <!--TODO: add javascript to allow this part or not-->
 
 <div class="mainSection">
-    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
         <div class="CameraArticle">
             
             <div class="CameraTitle">Camera 1
 
-                <input type="checkbox" id="checkbox" onclick="selectCameras(this.id)">
-                {% if filename %}
-                    <div>
-                        <img src="data:image/jpeg;{{ filename }}"></img>
-                    </div>
-                {% endif %}
+                <input type="checkbox" id="IpAddress" value="true" onclick="selectCameras(this.id)"  > <!-- onclick="selectCameras(this.id)" -->
+                <img id="input_image">
+
+                <cameras id='canvas_output'></cameras>
                 <!-- <img src="data:image/jpeg;base64, {{img}}"></img>
 
                 <py-script
