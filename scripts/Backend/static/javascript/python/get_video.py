@@ -11,15 +11,9 @@ from os import environ
 import matplotlib.pyplot as plt
 from pylab import *
 import base64
-#import v8eval
-#import PyV8
 
 import js2py
 from js2py import require
-#from drawnow import drawnow, figure
-
-
-
 
 
 from numba import jit, cuda
