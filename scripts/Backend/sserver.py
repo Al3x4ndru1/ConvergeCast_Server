@@ -16,7 +16,7 @@ from threading import active_count
 import requests
 from multiprocessing import Process
 
-from .static.javascript.python.get_video import show1
+from .static.javascript.python_js.get_video import show1
 
 processes = []
 T_threads = []
