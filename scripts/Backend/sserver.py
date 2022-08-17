@@ -53,7 +53,7 @@ def hello_world(s,ipaddress):
             #show(frame)
             #T_threads.append(thread)
             show1(frame,ipaddress)
-            cv.imshow(ipaddress, frame) # show images frame by frame 
+            #cv.imshow(ipaddress, frame) # show images frame by frame 
         except:
             continue # sometimes the line 41 will return a error about the headers so the code will not print that frame, will skip to be able to have more fps
         if cv.waitKey(20) & 0xFF == ord('d'):   # stop the video is the key 'd' is pressed (you can change as per your choice)
