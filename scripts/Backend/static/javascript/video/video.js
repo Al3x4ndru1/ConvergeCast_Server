@@ -1,3 +1,6 @@
+import { ShowImageJavaScript } from "./javascript/js/"; // import the javascript function
+import * as name from "module-name";
+
 export default function ShowImageJavaScript(image)
 {  a=document.getElementById(ipAddress);
     //Check if the CheckBox of that video is check

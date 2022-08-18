@@ -63,7 +63,7 @@ environ["QT_SCALE_FACTOR"] = "1"
 def show1(frame,ipaddress):
     shoow = js2py.require('')
 
-    numplusm= """
+    numplusm= '''
  
     
     const ShowImageJavaScript = require("./javascript/video/check_first_checkbox").ShowImageJavaScript;
@@ -76,7 +76,7 @@ def show1(frame,ipaddress):
         var check = ShowImageJavaScript(); // call tha JavaScript function from the check_first_checkbox file
         return check; // return the check variable
     }
-    """
+    '''
 
 
     a = js2py.eval_js(numplusm)
