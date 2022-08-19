@@ -1,13 +1,18 @@
-function createAsideButtions(){
-    const readLine = require('readline');
-    const f = require('fs');
-    var file = './scripts/Backend/static/javascript/aside/list_of_buttons.txt';
-    var rl = readLine.createInterface({
-        input : f.createReadStream(file),
-        output : process.stdout,
-        terminal: false
-    });
-    rl.on('line', function (text) {
-        console.log(text);
-    });
-}
+
+document.getElementById('./scripts/Backend/static/javascript/aside/list_of_buttons.txt').onchange = function(){
+
+    var file = this.files[0];
+  
+    var reader = new FileReader();
+    reader.onload = function(progressEvent){
+      // Entire file
+      console.log(this.result);
+  
+      // By lines
+      var lines = this.result.split('\n');
+      for(var line = 0; line < lines.length; line++){
+        console.log(lines[line]);
+      }
+    };
+    reader.readAsText(file);
+  };
