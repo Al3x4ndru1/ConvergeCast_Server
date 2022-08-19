@@ -10,7 +10,7 @@ js= '''
 
 a = js2py.eval_js(js)
 
-result, tempfile = js2py.run_file("./scripts/Backend/static/javascript/video/Checks/check_first_checkbox.js")
-result = tempfile.ShowImageJavaScript()
+result, tempfile = js2py.run_file("test.js")
+result = tempfile.numar(3)
 print(result)
 print(a())

@@ -1,3 +1,5 @@
+import { numarray } from 'test2.js'
 function numar(x){
-    return x*x; //return 1 if the checkbox is
+    var a = numarr();
+    return a; //return 1 if the checkbox is
 }
