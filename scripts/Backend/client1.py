@@ -22,7 +22,8 @@ def video():
             encoded, buf =  cv.imencode('.jpg', frame, encode_param) # encode the frame using opencv with the quality selected "85"
             zlibcompression = zlib.compress(pickle.dumps(buf)) #Compress the encoded JPEG, first convert the object into a byte steam 
             return Response(zlibcompression,status=200,headers={'Content-Enconded':'b' ''}) #Response with the zlibcompression, status "ok/200",
- 
+    cv.release()
+    #cv.destroyAllWindows()
 
 
 if __name__ == '__main__':
