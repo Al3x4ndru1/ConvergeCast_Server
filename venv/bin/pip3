@@ -1,4 +1,4 @@
-#!/home/al3x4ndru1/newprojectgit/ConvergeCast/venv/bin/python3
+#!/home/al3x4ndru1/newprojectgit/ConvergeCast/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

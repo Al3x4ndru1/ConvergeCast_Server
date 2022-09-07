@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-export NODE_PATH='/home/al3x4ndru1/newprojectgit/ConvergeCast/venv/lib/node_modules'
-export NPM_CONFIG_PREFIX='/home/al3x4ndru1/newprojectgit/ConvergeCast/venv'
-export npm_config_prefix='/home/al3x4ndru1/newprojectgit/ConvergeCast/venv'
-exec '/home/al3x4ndru1/newprojectgit/ConvergeCast/venv/bin/node' "$@"
