@@ -1,7 +1,7 @@
 #!/bin/bash
 function get_network(){
-    interface=wlp3s0
-    x=`ifconfig $interface | head -2 | tail -1` ; return $x | cut -d ' ' -f2
+    #interface=
+    x= ifconfig wlp3s0 | head -2 | tail -1 ; return $x | cut -d ' ' -f2
     return "$x"
 }
 a=$get_network

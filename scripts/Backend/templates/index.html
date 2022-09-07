@@ -2,10 +2,7 @@
 <html>
 <head>
 <title>Convrge Cast</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='Css/style.css') }}"/>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link async rel="stylesheet" href="{{ url_for('static', filename='javascript/js/opencv.js')}}">
 <!-- <link rel="stylesheet" href="javascript/js/utils.js"> -->
@@ -30,15 +27,12 @@ filename = 'javascript/main/create_video.js')}}"/> <!--Inport javascript that wi
 
 
 
-
-<script
-type="text/javascript"
-src="{{ url_for('static', filename='/javascript/aside/activate_Buttons.js')}}" 
- ></script> <!--Inport javascript that will check the if the ckeckboxs are selected to tell the user to don't activate
-                any computervision features without selecting a camera-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
+crossorigin="anonymous">
 
 
-
+                
 <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
 <!-- <script defer src="https://pyscript.net/alpha/pyscript.js"></script> -->
 
@@ -48,48 +42,61 @@ type="text/javascript"
 src="{{ url_for('static', filename='/javascript/aside/aside.js')}}"
  ></script> -->
 
- <py-env>
-    - OpenCV
-    - cv2
-    - os
-    - matplotlib
-     - ./get_video.py
- </py-env>
 
 </head>
 <body>
+    <main>
+      <div class="display-1 color-primary text-center">Convrge Cast</div>
+        <!------------- Nav for AI selection ------------------->
+      
+        <nav class="navbar navbar-dark bg-dark float-right">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Click on the right button to see the options</a>
 
-    <header>
-        <div class="Number-of-Cameras">
-            <h1>Number of cameras</h1>
-            <p>0</p>
-        </div>
-    </header>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
 
-<div class="sidenav">
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
 
-     <button onclick="myFunction()">Try</button>
-    <div id="container"></div>
-<script>
-    var file = document.getElementById("./scripts/Backend/templates/list_of_buttons.txt").files[0];
-  
-  var reader = new FileReader();
-  reader.onload = function(progressEvent){
-    // Entire file
-    console.log(this.result);
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
 
-    // By lines
-    var lines = this.result.split('\n');
-    for(var line = 0; line < lines.length; line++){
-      console.log(lines[line]);
-    }
-  };
-  reader.readAsText(file);
+   
 
-</script>  
-
-</div>
 
   
 
@@ -132,5 +139,20 @@ src="{{ url_for('static', filename='/javascript/aside/aside.js')}}"
 
 <button class="font-size:24px"><i class="material-icons">fullscreen</i></button>
 
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" 
+integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" 
+crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" 
+integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" 
+crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='/javascript/aside/activate_Buttons.js')}}" ></script> <!--Inport javascript that will check the if the ckeckboxs are selected to tell the user to don't activate
+                any computervision features without selecting a camera-->
 </body>
+
+
 </html>
