@@ -8,8 +8,8 @@ read x
 python3 -m pip install --upgrade pip
 python3 -m venv venv 
 source venv/bin/activate
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 python -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 #pip install bson Do not install the "bson" package from pypi. PyMongo comes with its own bson package;
