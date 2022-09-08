@@ -10,6 +10,7 @@ compress-json==1.0.7
 cupy==10.6.0
 cycler==0.11.0
 Cython==0.29.30
+dlib==19.24.0
 drawnow==0.72.5
 Eel==0.14.0
 fastapi==0.79.0
@@ -26,15 +27,18 @@ gevent==21.12.0
 gevent-websocket==0.10.1
 greenlet==1.1.2
 idna==3.3
+importlib-metadata==4.12.0
 imutils==0.5.4
 itsdangerous==2.1.2
 Jinja2==3.1.2
 Js2Py==0.71
+jyserver==0.0.5
 kiwisolver==1.4.4
 llvmlite==0.38.1
 MarkupSafe==2.1.1
 matplotlib==3.5.2
 numba==0.55.2
+numpy==1.22.4
 opencv-contrib-python==4.6.0.66
 opencv-python==4.6.0.66
 packaging==21.3
@@ -64,5 +68,6 @@ waitress==2.1.2
 Werkzeug==2.1.2
 whichcraft==0.6.1
 WTForms==3.0.1
+zipp==3.8.1
 zope.event==4.5.0
 zope.interface==5.4.0

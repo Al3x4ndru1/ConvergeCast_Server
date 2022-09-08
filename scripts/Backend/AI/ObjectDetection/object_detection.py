@@ -1,6 +1,6 @@
 import cv2 as cv
 
-class Dtector:
+# class Dtector:
     
-    def __init__(self,):
+#     def __init__(self,):
         

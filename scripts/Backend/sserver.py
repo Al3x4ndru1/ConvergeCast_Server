@@ -16,7 +16,7 @@ from threading import active_count
 import requests
 from multiprocessing import Process
 from .AI.face_detecetion import face_detect
-from .AI.facial_lanmarks import landmark_detection
+#from .AI.facial_lanmarks import landmark_detection
 from .AI.body_detection import full_body_detector
 from .AI.face_name_detetection import faceName
 
